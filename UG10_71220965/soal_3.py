@@ -13,11 +13,11 @@ for bil in ['Pertama','Kedua','Ketiga','Keempat']:
     bilangan = int(input(f'Masukan bilangan {bil} : '))
     lst.append(bilangan)
 
-lst = map(str,lst)
+lst = map(int,lst)
 
 if opsi == 1:
-    urut = ' '.join(sorted(lst))
-    print(f'Urutan bilangan dari yang terkecil adalah {urut}')
+    print('Urutan bilangan dari yang terkecil adalah ',end='')
+    print(*sorted(lst),sep=' ')
 else:
-    urut = ' '.join(sorted(lst)[::-1])
-    print(f'Urutan bilangan dari yang terbesar adalah {urut}')
+    print('Urutan bilangan dari yang terbesar adalah ',end=' ')
+    print(*sorted(lst,reverse=True),sep=' ')
